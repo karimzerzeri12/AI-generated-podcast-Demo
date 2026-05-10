@@ -1,1 +1,30 @@
 #Introduction 
+# Create the RAG Prompt
+                system_prompt = (
+                    "You are an expert podcast writer. Use the provided project context "
+                    "to write a brief, engaging 2-person dialogue (Host and Guest). "
+                    "Focus only on the project facts provided. \n\n Context: {context}"
+                )
+                prompt_template = ChatPromptTemplate.from_messages([
+                    ("system", system_prompt),
+                    ("human", "{input}"),
+                ])
+                
+                # Build the Chain
+                question_answer_chain = create_stuff_documents_chain(llm, prompt_template)
+                rag_chain = create_retrieval_chain(retriever, question_answer_chain)
+                
+                # Run the Chain
+                response = rag_chain.invoke({"input": user_input})
+                
+                # Display Results
+                st.subheader("Generated Script")
+                st.write(response["answer"])
+                
+                # Save for ElevenLabs step
+                st.session_state['last_script'] = response["answer"]
+                
+        except Exception as e:
+            st.error(f"Error: {e}")
+    else:
+        st.warning("Please enter a topic!")
