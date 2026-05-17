@@ -3,7 +3,7 @@ import os
 from dotenv import load_dotenv
 import pymupdf4llm # it's primary output is a structured markdown, integrated 'smart' OCR and it provides high accuracy  (able to extract tables verry accurately)
 
-from langchain_community.document_loaders import PyPDFLoader # loses formating, and often grabled
+from langchain_community.document_loaders import PyPDFLoader # loses formating, and often garbled
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
 from langchain_core.prompts import ChatPromptTemplate
