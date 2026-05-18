@@ -906,47 +906,4 @@ if st.session_state.step >= 6 and st.session_state.generated_script:
                         st.success('✅ Audio regenerated!')
                         st.rerun()
 
-# ==================== SIDEBAR ====================
-with st.sidebar:
-    st.markdown('### 📚 About')
-    st.markdown("""
-    **AI Podcast Generator - Food Flavour Design**
-    
-    Multi-voice podcasts using **Piper TTS** (Free, local, open-source)!
-    """)
-    
-    st.divider()
-    st.markdown('### ⚙️ Setup Required')
-    st.markdown("""
-    **1. Install Piper:**
-    ```bash
-    pip install piper-tts
-    ```
-    
-    **2. Download voice models:**
-    Create a `piper_models` folder and download from:
-    https://huggingface.co/rhasspy/piper-voices/tree/main
-    
-    **Required files:**
-    - `en_US-lessac-medium.onnx` + `.json`
-    - `en_US-libritts-high.onnx` + `.json`
-    - `en_US-ryan-medium.onnx` + `.json`
-    - `en_US-hfc_female-medium.onnx` + `.json`
-    - `en_US-arctic-medium.onnx` + `.json`
-    
-    **3. Run:**
-    ```bash
-    streamlit run your_app.py
-    ```
-    """)
-    
-    st.divider()
-    st.markdown('### 💰 Cost')
-    st.markdown("""
-    ✅ **Completely FREE**
-    - No API keys needed for TTS
-    - No usage limits
-    - No billing required
-    - Runs entirely on your laptop
-    - Only Google API key needed for script generation
-    """)
+
