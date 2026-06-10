@@ -772,7 +772,7 @@ if st.session_state.step >= 5:
             btn_label = '🎙️ Generate Podcast Script & Audio' if generate_audio else '📝 Generate Podcast Script Only'
             if st.button(btn_label, key='btn_generate', use_container_width=True):
                 with st.spinner('🔄 Generating your podcast...'):
-                    pdf_path = "C:\\Users\\Karim\\Downloads\\Insights into flavor and key influencing factors of Maillard reaction products_ A recent update - fnut-09-973677.pdf"
+                    pdf_path = "Maillard Reaction 0.1.PDF"
                     
                     retriever = initialize_rag(pdf_path, st.session_state.form_data['chapter'])
                     
