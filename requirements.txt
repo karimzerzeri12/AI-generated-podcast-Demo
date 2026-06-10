@@ -2,3 +2,9 @@ streamlit
 python-dotenv
 google-generativeai
 langchain-google-genai
+langchain-huggingface
+langchain-community
+faiss-cpu
+sentence-transformers
+pymupdf4llm
+langsmith
